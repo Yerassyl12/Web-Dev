@@ -1,0 +1,45 @@
+<!-- <div class="product-list">
+    <div *ngIf="product" class="product-card">
+        <img [src]="product.imageUrl" alt="{{ product.name }}" />
+        <h3>Name:{{ product.name }}</h3>
+        <p>Price:{{ product.price }}₸</p>
+        <h4>Rating:{{ product.rating }}/5</h4>
+        <div class="text-container">
+            <h5>Description:{{ product.description }}</h5>
+        </div>
+    
+    
+        <a routerLink="/">Back to products list</a>
+    </div>
+</div>  -->
+<!-- <div class="product-detail-container">
+    <div *ngIf="product" class="product-detail">
+        <img [src]="product.imageUrl" alt="{{ product.name }}" />
+        <h3>{{ product.name }}</h3>
+        <p>Price: {{ product.price }}₸</p>
+        <p>Rating: {{ product.rating }}/5</p>
+        <p>Description: {{ product.description }}</p>
+        <button (click)="closeTab()">Закрыть</button>
+
+    </div>
+</div>
+   -->
+
+<div class="product-detail-container">
+    <div *ngIf="product" class="product-detail">
+      <h1>{{ product.name }}</h1>
+        <div class="product-info">
+            <img [src]="product.imageUrl" alt="{{ product.name }}" class="product-image">
+            <div class="details">
+                <p><strong>Цена:</strong> {{ product.price | currency }}</p>
+                <p><strong>Описание:</strong> {{ product.description }}</p>
+                <p><strong>Рейтинг:</strong> {{ product.rating }} / 5</p>
+            </div>
+        </div>
+        <button (click)="closeTab()">Закрыть</button>
+    </div>
+    <div *ngIf="!product" class="product-not-found">
+        <h2>Продукт не найден</h2>
+    </div>
+</div>
+  
