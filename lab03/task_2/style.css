@@ -23,38 +23,49 @@ body{
     left: 100px;
     background-color: grey;
     width: 1200px;
-    height: 200px;
-}
-.table-container{
-    position: absolute;
-    top: 10px;
-    left: 50px;
-    width: 200px;
     height: 300px;
 }
+.table-container {
+    max-height: 100%; /* Ограничиваем высоту таблицы */
+    overflow-y: auto; /* Добавляем вертикальную прокрутку */
+    overflow-x: hidden; /* Убираем горизонтальный скролл, если не нужен */
+    width: 100%;
+}
+#secondTable{
+    width: 100%;
+    height: 100%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Улучшает адаптацию ширины */
+}
 table, th, td {
-    border: 2px solid black; /* Жирные границы */
-    border-collapse: collapse; /* Границы без пробелов */
+    border: 1px solid black;
 }
 th, td {
-    padding: 10px;
-    text-align: center;
+    padding: 8px;
+    text-align: left;
 }
 .selected {
-    background-color: lightcoral; /* Выделенная строка */
+    background-color: lightcoral;
 }
-button {
-    margin-top: 10px;
-    padding: 5px 10px;
+.add-button {
+    position: absolute;
+    top: 10px;
+    left: 1250px;
     cursor: pointer;
+    width: 100px;
+    height: 50px; 
+    padding: 10px 20px;
 }
 .remove-button{
     position: absolute;
     top: 10px;
     left: 1250px;
     cursor: pointer;
-    width: 100px; /* Ширина кнопки */
-    height: 50px; /* Высота кнопки */
+    width: 100px; 
+    height: 50px; 
     padding: 10px 20px;
 }
 .done {
@@ -65,25 +76,13 @@ button {
 }
 .menu2-slide{
     position: absolute;
-    top: 400px;
+    top: 500px;
     left: 100px;
     background-color: grey;
     width: 1200px;
-    height: 70px;
+    height: 100px;
 }
-.status-checked {
-    background-color: lightgreen;
-}
-.add-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: blue;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-.add-button:hover {
-    background-color: darkblue;
+.checkbox {
+    transform: scale(3); /* Увеличиваем размер чекбокса */
+    margin: 5px;
 }
