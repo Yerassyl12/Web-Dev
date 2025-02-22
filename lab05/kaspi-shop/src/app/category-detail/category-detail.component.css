@@ -1,0 +1,40 @@
+.listing {
+    background: grey;
+    border-radius: 30px;
+    padding-bottom: 30px;
+    border: 4px solid black;
+    max-height:1000px;
+}
+.listing-heading {
+
+    color: var(--primary-color);
+    font-size: 25px;
+    padding: 10px 20px 0 20px;
+}
+.listing-photo {
+    max-height: 450px;
+    max-width: 400px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain; /* Показывает всю картинку без обрезки */
+    border-radius: 30px 30px 0 0;
+    background-color: white; /* Добавляет фон, если фото не заполняет контейнер */
+    aspect-ratio: 5 / 9;
+    border: 2px solid var(--primary-color);
+}
+.listing-location {
+    font-size: 30px;
+    padding: 10px 20px 20px 20px;
+}
+.listing-location::before {
+    content: url("/assets/location-pin.svg") / "";
+}
+section.listing a {
+    padding-left: 20px;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+section.listing a::after {
+    content: "\203A";
+    margin-left: 5px;
+}
